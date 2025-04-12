@@ -1,0 +1,22 @@
+{%  extends 'usertasks/base.html' %}
+{% block body%}
+<div class="container">
+    <div class="row">
+        {% for task in task_list %}
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card_body">
+                    <h5 class="card-title">{{task.to_do_item}} </h5>
+                    <p class="card_text">{{task.desc}}</p>
+                    <a class="btn btn-warning" href="{%  url 'usertasks:task_detail' task.id %}">View Details</a> 
+                </div>
+            </div>
+        </div>
+        {% endfor%}
+    </div>
+</div>
+
+
+{% endblock %}
+
+		

@@ -1,0 +1,19 @@
+{%  extends 'usertasks/base.html' %}
+{% block body%}
+
+<h2>{{task.title}}</h2>
+<h4>{{task.desc}}</h4>
+<h6>{{task.status}}</h6>
+<h6>{{task.start_date}}</h6>
+<h6>{{task.end_date}}</h6>
+<h6>{{task.completed}}</h6> 
+<h6>{{task.assigned_user}}</h6><br>
+
+
+
+<a class="btn btn-warning" href="{% url 'usertasks:update_task' task.id %}">Update</a>
+<a class="btn btn-danger" href="{% url 'usertasks:delete_task' task.id %}">Delete</a>
+ 
+
+{% endblock %}
+

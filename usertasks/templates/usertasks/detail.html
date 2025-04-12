@@ -1,0 +1,28 @@
+{%  extends 'usertasks/base.html' %}
+
+
+{% block body%}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img width="300" height="300" src="{{user.photo_image.url}}">
+        </div>
+
+        <div class="col-md-6">
+            <h2>{{user.name}}</h2>
+            <h6>{{user.email}}</h6>
+            <h6>{{user.manager}}</h6>
+            <h6>{{user.tasks}}</h6> <br>
+            <!-- <h6>{{user.is_staff}}</h6> <br>
+            <h6>{{user.is_active}}</h6> <br> -->
+            <a class="btn btn-warning" href="{% url 'usertasks:update_user' user.id %}">Update</a>
+            <a class="btn btn-danger" href="{% url 'usertasks:delete_user' user.id %}">Delete</a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+{% endblock %}

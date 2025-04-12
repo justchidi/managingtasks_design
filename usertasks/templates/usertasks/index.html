@@ -1,0 +1,38 @@
+{%  extends 'usertasks/base.html' %}
+
+{% block body%}
+<div class="container">
+    <div class="row">
+        {% for user in user_list %}
+        <div class="col-md-2">
+            <div class="card">
+                <img src="{{user.photo_image.url}}" class="card-img-top" alt="">
+                <div class="card_body">
+                    <h5 class="card-title">{{user.name}} </h5>
+
+                        {% if user.tasks %}
+
+                        {% for task in task_list %}
+                            {% if user.tasks == task.title %}
+
+                                <a href="task/{{task.id}}"> {{user.tasks}}</a> <br> 
+
+                            {% endif %}
+                        
+                        {% endfor %}
+
+                        {% else %}
+                            This user has no task.
+                        {% endif %}
+                     
+                    <a class="btn btn-warning" href="{%  url 'usertasks:detail' user.id %}">View Details</a> 
+                </div>
+            </div>
+        </div>
+        {% endfor%}
+    </div>
+</div>
+
+
+{% endblock %}
+

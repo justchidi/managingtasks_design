@@ -1,0 +1,12 @@
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="text" name="title" id="title" placeholder="Enter task title ">
+    <input type="text" name="desc" id="desc" placeholder="Enter description">
+    <input type="text" name="status" id="status" placeholder="Enter task status">
+    <input type="text" name="start_date" id="start_date" placeholder="Enter task start date">
+    <input type="text" name="end_date" id="end_date" placeholder="Enter task end date">
+    <input type="text" name="completed" id="completed" placeholder="Enter task end date">
+    <input type="text" name="assigned_user" id="assigned_user" placeholder="Enter assigned user">
+    <input type="submit" name="" id="">
+</form>
+

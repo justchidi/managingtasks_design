@@ -1,0 +1,9 @@
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="text" name="name" id="name" placeholder="Enter name of user">
+    <input type="text" name="email" id="email" placeholder="Enter email address">
+    <input type="text" name="manager" id="manager" placeholder="Enter user's manager">
+    <input type="text" name="tasks" id="tasks" placeholder="Enter user's tasks">
+    <input type="file" name="photo_image" id="photo_image">
+    <input type="submit" name="" id="">
+</form>
