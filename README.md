@@ -1,5 +1,5 @@
 # managingtasks_design
-High-level design for a full-stack web application for managing user tasks, using a python-based web server. 
+High-level design for a full-stack web application for managing user tasks, using a python-based (Django) web server. 
 # Managingtasks Design
 # Project Name: managingtasks
 # App name: usertasks
